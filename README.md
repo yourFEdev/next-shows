@@ -4,16 +4,16 @@ A modern and responsive portfolio website built with **Next.js**, **TypeScript**
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
 
-## ✨ Features
+## Features
 
--  Dark / Light Mode
--  Fully Responsive Design
--  Modern UI with Tailwind CSS
--  Smooth Animations using Framer Motion
--  Download Resume
--  Featured Projects Showcase
+- Dark / Light Mode
+- Fully Responsive Design
+- Modern UI with Tailwind CSS
+- Smooth Animations using Framer Motion
+- Download Resume
+- Featured Projects Showcase
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Next.js
 - React
@@ -23,7 +23,7 @@ A modern and responsive portfolio website built with **Next.js**, **TypeScript**
 - Lucide React
 - next-themes
 
-## 🚀 Getting Started
+## Getting Started
 
 Clone the repository
 
