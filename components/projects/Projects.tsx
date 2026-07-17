@@ -8,7 +8,7 @@ import Image from "next/image";
 const projects = [
   {
     title: "Voucher Hub",
-    image: "voucherHub.png",
+    image: "/voucherHub.png",
     description: "Topup voucher with payment integration and dashboard.",
     tech: ["Typescript", "React", "Redux", "Express.js", "MongoDB"],
     link: "https://frontend-voucherhub.vercel.app/",
@@ -28,14 +28,7 @@ export default function Projects() {
       <div className="container-page">
         <span className="section-subtitle">FEATURED PROJECTS</span>
 
-        <div
-          className="
-          mt-16
-          grid
-          lg:grid-cols-3
-          gap-8
-          "
-        >
+        <div className="mt-16 grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -62,6 +55,8 @@ export default function Projects() {
               <Image
                 src={project.image}
                 alt={project.title}
+                width={200}
+                height={200}
                 className="
                 h-56
                 w-full
@@ -100,7 +95,11 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <Link href="project.link">
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button
                     className="
                   mt-8
