@@ -9,9 +9,9 @@ const projects = [
   {
     title: "Compro BMS",
     image: "/comproBms.png",
-    description: " a company profile designed to showing products company ",
+    description: "a company profile designed to showing products company, mask and SHK",
     tech: ["Typescript", "React","Next"],
-    link: "https://frontend-kidney-mate.vercel.app/",
+    link: "https://www.bhinekamitrasejati.com/",
   },
   {
     title: "Voucher Hub",
@@ -117,6 +117,7 @@ export default function Projects() {
                   gap-2
                   group-hover:gap-3
                   transition-all
+                  cursor-pointer
                   "
                   >
                     View Project
