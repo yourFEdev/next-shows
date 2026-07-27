@@ -7,18 +7,25 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Compro BMS",
+    image: "/comproBms.png",
+    description: " a company profile designed to showing products company ",
+    tech: ["Typescript", "React","Next"],
+    link: "https://frontend-kidney-mate.vercel.app/",
+  },
+  {
     title: "Voucher Hub",
     image: "/voucherHub.png",
     description: "Topup voucher with payment integration and dashboard.",
-    tech: ["Typescript", "React", "Redux", "Express.js", "MongoDB"],
+    tech: ["Typescript", "React","Next", "Express.js", "MongoDB"],
     link: "https://frontend-voucherhub.vercel.app/",
   },
   {
     title: "KidneyMate",
-    image: "/projects/warehouse.png",
-    description: "on progress",
-    tech: ["Vue", "Pinia"],
-    link: "",
+    image: "/kidneyMate.png",
+    description: " a health monitoring designed to help hemodialysis patients ",
+    tech: ["Typescript","PHP","Vue","Pinia","Laravel","MySql" ],
+    link: "https://frontend-kidney-mate.vercel.app/",
   },
 ];
 

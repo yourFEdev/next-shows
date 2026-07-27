@@ -10,12 +10,12 @@ import {
 const focus = [
   "JavaScript",
   "TypeScript",
+  "PHP",
   "Vue 3",
-  "Quasar",
   "React",
   "Next.js",
   "Pinia",
-  "Redux",
+  "Laravel",
   "Tailwind CSS",
   "Node.js",
   "Express.js",
@@ -26,9 +26,7 @@ export default function About() {
   return (
     <section id="about" className="section">
       <div className="container-page">
-
         {/* Heading */}
-
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}

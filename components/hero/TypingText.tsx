@@ -13,7 +13,7 @@ export default function TypingText() {
                 2000,
                 "Next.js Developer",
                 2000,
-                "ERP Developer",
+                "Laravel Developer",
                 2000,
             ]}
             wrapper="h2"
