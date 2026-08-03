@@ -21,7 +21,7 @@ const projects = [
     description:
       "Digital voucher marketplace with payment integration, transaction management, and an admin dashboard.",
     tech: ["TypeScript", "React", "Next.js", "Express.js", "MongoDB"],
-    link: "https://frontend-voucherhub.vercel.app/",
+    link: "https://kidneymate.andreka.dev/",
     github: "https://github.com/yourFEdev/frontend-voucherHub",
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     description:
       "Hemodialysis companion application for monitoring fluid intake, medications, blood pressure, and dialysis schedules.",
     tech: ["TypeScript", "PHP", "Vue", "Pinia", "Laravel", "MySQL"],
-    link: "https://frontend-kidney-mate.vercel.app/",
+    link: "https://kidneymate.andreka.dev/",
     github: "https://github.com/yourFEdev/frontend-kidneyMate",
   },
 ];
