@@ -34,7 +34,7 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href={process.env.NEXT_PUBLIC_CV!}
+                href="https://docs.google.com/document/d/1H1L15RhDtej44WCnwu-ZqXVn-P1HZ1cdw8spscAdn2M/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
