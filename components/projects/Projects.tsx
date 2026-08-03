@@ -21,7 +21,7 @@ const projects = [
     description:
       "Digital voucher marketplace with payment integration, transaction management, and an admin dashboard.",
     tech: ["TypeScript", "React", "Next.js", "Express.js", "MongoDB"],
-    link: "https://kidneymate.andreka.dev/",
+    link: "https://voucherhub.andreka.dev/",
     github: "https://github.com/yourFEdev/frontend-voucherHub",
   },
   {
