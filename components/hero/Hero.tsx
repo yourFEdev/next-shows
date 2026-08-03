@@ -10,23 +10,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="
-            relative
-            min-h-screen
-            overflow-hidden
-            flex
-            items-center
-            "
+      className="relative flex min-h-screen items-center overflow-hidden"
     >
       <div className="container-page">
-        <div
-          className="
-                    grid
-                    lg:grid-cols-2
-                    gap-20
-                    items-center
-                    "
-        >
+        <div className="grid items-center gap-20 lg:grid-cols-2">
           {/* LEFT */}
 
           <motion.div
@@ -34,35 +21,13 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span
-              className="
-                            inline-block
-                            rounded-full
-                            bg-violet-500/10
-                            text-violet-500
-                            px-4
-                            py-2
-                            font-medium
-                            "
-            >
-              👋 Hello, Im
+            <span className="inline-block rounded-full bg-violet-500/10 px-4 py-2 text-2xl font-medium text-violet-500">
+              👋 Hello, Im Andre
             </span>
 
-            <h1
-              className="
-                            mt-6
-                            text-5xl
-                            md:text-7xl
-                            font-black
-                            leading-tight
-"
-            >
-              {process.env.NEXT_PUBLIC_NAME}
-            </h1>
-
+            <h1 className="mt-6 text-5xl leading-tight font-black md:text-7xl"></h1>
             <TypingText />
-
-            <p className="mt-8 text-lg text-slate-500 dark:text-slate-400 max-w-xl leading-8">
+            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-500 dark:text-slate-400">
               Building scalable web applications using React, Next.js, Vue.js,
               TypeScript and modern frontend technologies.
             </p>

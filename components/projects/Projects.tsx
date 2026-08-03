@@ -7,25 +7,31 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Compro BMS",
+    title: "Company Profile BMS",
     image: "/comproBms.png",
-    description: "a company profile designed to showing products company, mask and SHK",
-    tech: ["Typescript", "React","Next"],
+    description:
+      "Corporate profile website showcasing medical products and company services with a modern responsive design.",
+    tech: ["TypeScript", "React", "Next.js"],
     link: "https://www.bhinekamitrasejati.com/",
+    github: "https://github.com/yourFEdev?tab=repositories",
   },
   {
     title: "Voucher Hub",
     image: "/voucherHub.png",
-    description: "Topup voucher with payment integration and dashboard.",
-    tech: ["Typescript", "React","Next", "Express.js", "MongoDB"],
+    description:
+      "Digital voucher marketplace with payment integration, transaction management, and an admin dashboard.",
+    tech: ["TypeScript", "React", "Next.js", "Express.js", "MongoDB"],
     link: "https://frontend-voucherhub.vercel.app/",
+    github: "https://github.com/yourFEdev/frontend-voucherHub",
   },
   {
     title: "KidneyMate",
     image: "/kidneyMate.png",
-    description: " a health monitoring designed to help hemodialysis patients ",
-    tech: ["Typescript","PHP","Vue","Pinia","Laravel","MySql" ],
+    description:
+      "Hemodialysis companion application for monitoring fluid intake, medications, blood pressure, and dialysis schedules.",
+    tech: ["TypeScript", "PHP", "Vue", "Pinia", "Laravel", "MySQL"],
     link: "https://frontend-kidney-mate.vercel.app/",
+    github: "https://github.com/yourFEdev/frontend-kidneyMate",
   },
 ];
 
@@ -33,99 +39,82 @@ export default function Projects() {
   return (
     <section id="projects" className="section">
       <div className="container-page">
-        <span className="section-subtitle">FEATURED PROJECTS</span>
+        <div className="max-w-2xl">
+          <span className="section-subtitle">FEATURED PROJECTS</span>
 
-        <div className="mt-16 grid lg:grid-cols-3 gap-8">
+          <h2 className="mt-4 text-4xl font-black">Selected Work</h2>
+
+          <p className="mt-4 leading-7 text-slate-500 dark:text-slate-400">
+            A collection of projects I&apos;ve built using modern web
+            technologies, focusing on performance, scalability, and user
+            experience.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.article
               key={project.title}
-              initial={{
-                opacity: 0,
-                y: 30,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{
-                delay: index * 0.1,
+                duration: 0.5,
+                delay: index * 0.15,
               }}
-              className="
-              card
-              overflow-hidden
-              group
-              "
+              className="card group flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-violet-500/30 hover:shadow-2xl"
             >
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={200}
-                height={200}
-                className="
-                h-56
-                w-full
-                object-cover
-                group-hover:scale-105
-                transition
-                duration-500
-                "
-              />
+              <Link
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block overflow-hidden"
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={1200}
+                  height={700}
+                  className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
 
-              <div className="p-6">
-                <h3
-                  className="
-                  text-xl
-                  font-bold
-                  "
-                >
-                  {project.title}
-                </h3>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition group-hover:opacity-100">
+                  <div className="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 backdrop-blur">
+                    <span className="font-medium text-white">Live Demo</span>
 
-                <p
-                  className="
-                  mt-4
-                  text-slate-500
-                  dark:text-slate-400
-                  leading-7
-                  "
-                >
+                    <ArrowUpRight className="h-5 w-5 text-white" />
+                  </div>
+                </div>
+              </Link>
+
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-xl font-bold">{project.title}</h3>
+
+                <p className="mt-4 min-h-[96px] leading-7 text-slate-500 dark:text-slate-400">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-6">
+                <div className="mt-6 flex flex-wrap gap-2">
                   {project.tech.map((item) => (
-                    <span key={item} className="badge">
+                    <span
+                      key={item}
+                      className="rounded-md bg-slate-800 px-3 py-1 text-sm font-medium text-slate-200"
+                    >
                       {item}
                     </span>
                   ))}
                 </div>
+
                 <Link
-                  href={project.link}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center gap-2 pt-8 font-semibold text-slate-300 transition-all hover:text-white"
                 >
-                  <button
-                    className="
-                  mt-8
-                  text-violet-500
-                  font-semibold
-                  flex
-                  items-center
-                  gap-2
-                  group-hover:gap-3
-                  transition-all
-                  cursor-pointer
-                  "
-                  >
-                    View Project
-                    <ArrowUpRight size={18} />
-                  </button>
+                  View GitHub
                 </Link>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

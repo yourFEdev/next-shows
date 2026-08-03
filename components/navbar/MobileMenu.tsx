@@ -3,78 +3,39 @@
 import { X } from "lucide-react";
 
 interface Props {
-    open: boolean;
-    onClose: () => void;
+  open: boolean;
+  onClose: () => void;
 }
 
-const menus = [
-    "Home",
-    "About",
-    "Skills",
-    "Projects",
-    "Experience",
-    "Contact",
-];
+const menus = ["Home", "About", "Projects"];
 
-export default function MobileMenu({
-    open,
-    onClose,
-}: Props) {
+export default function MobileMenu({ open, onClose }: Props) {
+  return (
+    <div
+      className={`fixed inset-0 z-50 cursor-pointer transition-all ${open ? "visible" : "invisible"} `}
+    >
+      <div onClick={onClose} className="absolute inset-0 bg-black/50" />
 
-    return (
-        <div
-            className={`
-            fixed
-            inset-0
-            z-50
-            transition-all
-            ${open ? "visible" : "invisible"}
-            `}
-        >
-            <div
-                onClick={onClose}
-                className="
-                absolute
-                inset-0
-                bg-black/50
-                "
-            />
+      <div
+        className={`absolute top-0 right-0 h-full w-72 bg-white p-8 transition-transform duration-300 dark:bg-slate-900 ${open ? "translate-x-0" : "translate-x-full"} `}
+      >
+        <button onClick={onClose} className="mb-10">
+          <X />
+        </button>
 
-            <div
-                className={`
-                absolute
-                right-0
-                top-0
-                h-full
-                w-72
-                bg-white
-                dark:bg-slate-900
-                p-8
-                transition-transform
-                duration-300
-                ${open ? "translate-x-0" : "translate-x-full"}
-                `}
+        <div className="space-y-6">
+          {menus.map((menu) => (
+            <a
+              key={menu}
+              href={`#${menu.toLowerCase()}`}
+              onClick={onClose}
+              className="block text-lg"
             >
-                <button
-                    onClick={onClose}
-                    className="mb-10"
-                >
-                    <X />
-                </button>
-
-                <div className="space-y-6">
-                    {menus.map(menu => (
-                        <a
-                            key={menu}
-                            href={`#${menu.toLowerCase()}`}
-                            onClick={onClose}
-                            className="block text-lg"
-                        >
-                            {menu}
-                        </a>
-                    ))}
-                </div>
-            </div>
+              {menu}
+            </a>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 }
