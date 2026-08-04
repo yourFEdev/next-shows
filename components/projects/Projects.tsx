@@ -76,6 +76,7 @@ export default function Projects() {
                   width={1200}
                   height={700}
                   className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  unoptimized
                 />
 
                 <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition group-hover:opacity-100">

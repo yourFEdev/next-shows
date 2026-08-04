@@ -49,7 +49,9 @@ export default function About() {
                 Ae.
               </div>
 
-              <h3 className="mt-6 text-2xl font-bold">Frontend Developer</h3>
+              <h3 className="mt-6 text-2xl font-bold">
+                Frontend & Full Stack Developer
+              </h3>
 
               <div className="mt-2 flex items-center gap-2 text-sm text-green-400">
                 <Sparkles size={15} />
@@ -59,10 +61,12 @@ export default function About() {
 
             <div className="mt-10 space-y-6">
               <p className="leading-8 text-slate-400">
-                Im a Frontend Web Developer passionate about building modern,
-                scalable, and user-friendly web applications. I enjoy
-                transforming ideas into intuitive digital experiences with clean
-                and maintainable code.
+                I&apos;m a Frontend Developer with experience building
+                responsive web applications using React, Next.js, Vue.js, and
+                TypeScript. I enjoy transforming ideas into intuitive digital
+                experiences while writing clean, maintainable, and scalable
+                code. I also have experience integrating REST APIs and
+                collaborating on full-stack projects.
               </p>
             </div>
 
@@ -80,7 +84,7 @@ export default function About() {
               <div className="rounded-xl bg-slate-800/50 p-4">
                 <MapPin className="mb-3 text-violet-500" />
 
-                <h4 className="text-2xl font-bold">ID</h4>
+                <h4 className="text-2xl font-bold">Semarang</h4>
 
                 <p className="text-sm text-slate-400">Indonesia</p>
               </div>
